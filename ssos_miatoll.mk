@@ -4,7 +4,15 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Include Framework
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+
+# Include from device
 $(call inherit-product, device/xiaomi/miatoll/device.mk)
+
+# Include some Shapeshift stuff
 $(call inherit-product, vendor/ssos/config/common_full_phone.mk)
 
 # BootAnimation Resolution
